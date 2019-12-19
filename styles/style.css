@@ -4,54 +4,115 @@
   box-sizing: border-box;
 }
 
+:root {
+  --sidebar-child-bottom-margin: 2.25rem;
+}
+
 body,
 button,
 a {
   font-family: "Segoe UI", "Roboto", arial, sans-serif;
   color: #fff;
+  letter-spacing: 0.06em;
+}
+
+p {
+  text-transform: uppercase;
+}
+
+.sidebar__group2__desc,
+.sidebar__group3__desc {
+  text-transform: unset;
+}
+
+h1,
+h2,
+h3 {
+  text-transform: uppercase;
 }
 
 body {
   min-height: 100vh;
-  display: grid;
-  grid-template-areas: "nav nav" "main sidebar";
-  grid-template-rows: auto 1fr;
-  grid-template-columns: 2fr 1fr;
-  background-color: #222;
+  background-color: #000;
   color: #fff;
+  display: grid;
+  grid-template-rows: auto 1fr;
 }
 
 .nav {
-  grid-area: nav;
-  padding: 1.5rem 2rem;
+  padding: 1.35rem 2rem;
 }
-
-.main {
-  grid-area: main;
-}
-
-.sidebar {
-  grid-area: sidebar;
-}
-
 .nav__list {
   display: flex;
   justify-content: space-between;
   align-items: center;
   list-style: none;
 }
+.nav__list__item__link {
+  font-weight: 700;
+  text-decoration: none;
+}
 
 .tesla-logo {
-  width: 55px;
+  width: 100px;
+}
+
+.main {
+  background-image: url(../images/cybertruck.png);
+  background-size: calc(150vw - 435px);
+  background-position: calc(20px - 25vw) 50%;
+  background-repeat: no-repeat;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-template-rows: 1fr;
+}
+
+.content {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+.content__list {
+  display: flex;
+  list-style: none;
+  margin-bottom: 6rem;
+}
+.content__list__item {
+  margin-left: 0.75rem;
+  margin-right: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.45rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.content__list__item span:nth-child(1) {
+  text-shadow: 0 0 2px #fff;
+}
+.content__list__item span:nth-child(2) {
+  font-size: 1rem;
+}
+
+.sidebar {
+  --para-bottom-margin: .5rem;
+  padding: 6rem 2rem;
+}
+.sidebar__title {
+  margin-bottom: var(--sidebar-child-bottom-margin);
+}
+.sidebar__group1__para {
+  display: flex;
+  justify-content: space-between;
 }
 
 .buy-btn {
-  --notch-size: 15px;
   --notch: polygon(0 0,100% 0,100% calc(100% - 10px),calc(100% - 10px) 100%,0 100%);
   --notch--outline: polygon(0 0,100% 0,100% calc(100% - 10px),calc(100% - 10px) 100%,0 100%,0 4px,4px 4px,4px calc(100% - 4px),calc(100% - 12px) calc(100% - 4px),calc(100% - 4px) calc(100% - 12px),calc(100% - 4px) 4px,0 4px);
   position: relative;
   margin: 2rem;
-  padding: 0.5rem 8rem;
+  padding: 0.5rem 6rem;
   text-transform: uppercase;
   font-size: 1rem;
   font-weight: 700;
