@@ -7,3 +7,7 @@
 * Sass used throughout for nesting purposes
 
 * CSS Grid and Flexbox used extensively for layout
+
+* CSS variables utilized
+
+* Custom JS for selecting preferred motor variant, and self-driving option

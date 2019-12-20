@@ -160,6 +160,25 @@ body {
         opacity: .7;
     }
 
+    &__group1__para,
+    &__group2__para {
+        opacity: .65;
+        cursor: pointer;
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+
+    // JS active class
+    &__group1__para.active {
+        opacity: 1;
+    }
+
+    &__group2__para.active {
+        opacity: 1;
+    }
+
 }
 
 .buy-btn {
